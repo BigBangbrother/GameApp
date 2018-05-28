@@ -1,4 +1,4 @@
-package com.example.wzw.gameapp.bean;
+package com.example.wzw.gameapp.model.net.bean;
 
 /**
  * @项目名称 :GameApp

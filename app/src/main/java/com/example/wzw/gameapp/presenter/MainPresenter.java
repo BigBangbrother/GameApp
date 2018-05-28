@@ -1,14 +1,11 @@
 package com.example.wzw.gameapp.presenter;
 
-import com.example.wzw.gameapp.bean.ResontInfo;
-import com.example.wzw.gameapp.request.ResponselnfoAPi;
+import com.example.wzw.gameapp.model.net.bean.ResontInfo;
 import com.example.wzw.gameapp.ui.activity.MainActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * @项目名称 :GameApp
@@ -20,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @修改备注：
  */
 
-public class MainPresenter {
+public class MainPresenter extends BasePresenter{
 
     MainActivity mMainActivity;
 
@@ -28,25 +25,9 @@ public class MainPresenter {
         mMainActivity = mainActivity;
     }
 
-
-    //retorfit简单使用步骤
-    public Retrofit.Builder requeset(){
-        Retrofit.Builder builder = new Retrofit.Builder();
-        //服务器地址
-        builder.baseUrl("");
-        //创建gson解析
-        builder.addConverterFactory(GsonConverterFactory.create());
-
-        return builder;
-
-    }
-
-
     public void request2(){
-        Retrofit retrofit = requeset().build();
 
-        ResponselnfoAPi api = retrofit.create(ResponselnfoAPi.class);
-        Call<ResontInfo> call = api.login(123,"");
+        Call<ResontInfo> call = mApi.login(123,"");
 
         call.enqueue(new Callback<ResontInfo>() {
             @Override

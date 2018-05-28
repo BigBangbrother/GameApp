@@ -1,6 +1,6 @@
 package com.example.wzw.gameapp.request;
 
-import com.example.wzw.gameapp.bean.ResontInfo;
+import com.example.wzw.gameapp.model.net.bean.ResontInfo;
 import com.example.wzw.gameapp.utils.Constant;
 
 import retrofit2.Call;
@@ -19,6 +19,6 @@ import retrofit2.http.Query;
 
 public interface ResponselnfoAPi {
     @GET(Constant.LOGIN)
-    Call<ResontInfo>login(@Query("name") int name,@Query("pass") String pass);
+    Call<ResontInfo> login(@Query("name") int name, @Query("pass") String pass);
 
 }
