@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:clipChildren="false"
+        android:layout_height="wrap_content"
+        android:weightSum="200"
+        android:gravity="center_vertical">
+        <com.example.wzw.gameapp.ui.activity.ViewPagerTransform
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="337dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="40dp"
+            android:clipChildren="false"
+            >
+        </com.example.wzw.gameapp.ui.activity.ViewPagerTransform>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+</LinearLayout>
