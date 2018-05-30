@@ -1,4 +1,4 @@
-package com.example.wzw.gameapp.ui.activity;
+package com.example.wzw.gameapp.ui.views;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -40,7 +40,7 @@ public class ViewPagerTransform
         });*/
     }
 
-    public class DepthPageTransformer implements ViewPager.PageTransformer {
+    public class DepthPageTransformer implements PageTransformer {
 
         @TargetApi(Build.VERSION_CODES.HONEYCOMB)
         @SuppressLint("NewApi")

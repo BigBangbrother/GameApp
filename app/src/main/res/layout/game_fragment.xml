@@ -1,11 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/game"
-        android:gravity="center"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical">
+    <ImageView
+        android:id="@+id/massage"
+        android:src="@drawable/massage"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="end"
+
+        android:layout_width="20dp"
+        android:layout_height="24dp"/>
+    <LinearLayout
+        android:id="@+id/page"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="101dp"
+        android:clipChildren="false"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:weightSum="200">
+
+        <com.example.wzw.gameapp.ui.views.ViewPagerTransform
+            android:id="@+id/viewpager"
+            android:layout_width="265dp"
+            android:layout_height="337dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="40dp"
+            android:clipChildren="false"
+            >
+        </com.example.wzw.gameapp.ui.views.ViewPagerTransform>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="37dp"
+        android:id="@+id/main_linear"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+</LinearLayout>

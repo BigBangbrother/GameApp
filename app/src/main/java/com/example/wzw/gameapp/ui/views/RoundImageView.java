@@ -1,4 +1,4 @@
-package com.example.wzw.gameapp.ui.activity;
+package com.example.wzw.gameapp.ui.views;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
