@@ -1,5 +1,6 @@
 package com.example.wzw.gameapp.presenter.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.wzw.gameapp.R;
+import com.example.wzw.gameapp.ui.activity.GameListActivity;
 import com.example.wzw.gameapp.ui.views.ViewPagerTransform;
 
 import butterknife.BindView;
@@ -80,6 +82,12 @@ public class GameFragment extends BaseFragment implements  ViewPager.OnPageChang
                 //                view.setLayoutParams(getPageLayoutParams());
                 ImageView iv = (ImageView) view.findViewById(R.id.headRIV);
                 iv.setImageResource(pics[position]);
+                view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(getActivity(), GameListActivity.class));
+                    }
+                });
                 container.addView(view);
                 return view;
             }
